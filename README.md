@@ -1,4 +1,4 @@
-##This project allows you to listen to any radio stream with Xiaomi Mi Radio and Xiaomi Gateway and Home Assistant (optional).
+## This project allows you to listen to any radio stream with Xiaomi Mi Radio and Xiaomi Gateway and Home Assistant (optional).
 
 1. First of all, you need to obtain a token of your Xiaomi device.
 Easiest way to do this is to add a device to your Xiaomi account with the official Mi Home app and then use [Xiaomi-cloud-tokens-extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor).
