@@ -2,7 +2,7 @@
 
 1. First of all, you need to obtain a token of your Xiaomi device.
 Easiest way to do this is to add a device to your Xiaomi account with the official Mi Home app and then use [Xiaomi-cloud-tokens-extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor).
-2. Then we need to create [HLS audio playlist](https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming) with a stream which device can recognize. In short, it is the m3u8 HLS playlist that has .aac files inside. To do this we'll create Docker image with nginx and ffmeg based on [Shoutcast2HLS](https://github.com/dehy/shoutcast2hls) project. Thanks to https://github.com/andr68rus/miwifiradio/blob/master/include/ffcontrol.php for ffmpeg params for the playlist.
+2. Then we need to create [HLS audio playlist](https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming) with a stream which device can recognize. In short, it is the m3u8 HLS playlist that has .aac files inside. To do this we'll create Docker image with nginx and ffmeg based on [Shoutcast2HLS](https://github.com/dehy/shoutcast2hls) project. Thanks to [miwifiradio](https://github.com/andr68rus/miwifiradio/blob/master/include/ffcontrol.php) project for ffmpeg params.
 
 ```
 $ cd stream2hls_docker
