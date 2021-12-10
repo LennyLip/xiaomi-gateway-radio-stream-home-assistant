@@ -1,0 +1,12 @@
+{
+  "domain": "xiaomi_gateway_radio",
+  "name": "Xiaomi Gateway Radio",
+  "version": "1.1",
+  "documentation": "https://github.com/h4v1nfun/xiaomi_miio_gateway",
+  "dependencies": [],
+  "codeowners": [
+    "@h4v1nfun",
+    "lennylip"
+  ],
+  "requirements": ["aiodocker==0.21.0"]
+}

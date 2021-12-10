@@ -1,0 +1,1 @@
+docker build -t LennyLip/stream2hls .

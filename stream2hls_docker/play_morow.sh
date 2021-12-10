@@ -1,0 +1,1 @@
+php miio-cli.php --token xxxxxx --ip 192.168.1.5  --sendcmd '{"id":1,"method":"play_specify_fm","params":{"id":1,"type":0,"url":"http://serverip/morow_128k.m3u8"}}'
