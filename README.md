@@ -9,7 +9,7 @@ $ cd stream2hls_docker
 $ ./build_docker.sh
 ```
 
-To run docker with morow.com station to transocode to Xiaomi playlist stream run script:
+To start docker with morow.com station to transocode to Xiaomi playlist stream run script:
 
 ```
 $ ./run_docker_morow.sh
@@ -31,7 +31,7 @@ you can check /usr/share/nginx/html folder inside docker for generated files (m3
 
 NB. python-miio not helps us due [this issue](https://github.com/rytilahti/python-miio/issues/629).
 
-4. (Optional) Home assistant component. home_assistant folder contains a custom component for Home Assistant to play/stop, change volume of current radio channel of Xiaomi Gateway device. It's based on [Home Assistant Xiaomi Gateway Radio](https://github.com/h4v1nfun/xiaomi_miio_gateway) project with start\stop docker functional while you stop or start radion (to disable transcoding while you do not listen to the radio). Just copy xiaomi_gateway_radio to the custom component folder, add config strings (see README.md inside component folder) and restart your Home Assistant server. If you use Home Assistant inside docker you need to add /var/run/docker.sock volume to Home Assistant docker image to able to manage dockers containers from the custom component.
+4. (Optional) Home assistant component. home_assistant folder contains a custom component for Home Assistant to play/stop, change volume of current radio channel of Xiaomi Gateway device. It's based on [Home Assistant Xiaomi Gateway Radio](https://github.com/h4v1nfun/xiaomi_miio_gateway) project with start\stop docker functional while you stop or start radio (to disable transcoding while you do not listen to the radio). Just copy xiaomi_gateway_radio to the custom component folder, add config strings (see README.md inside the component folder) and restart your Home Assistant server. If you use Home Assistant inside docker you need to add /var/run/docker.sock volume to Home Assistant docker image to be able to manage docker containers from the custom component.
 
 ![home assistant](https://raw.githubusercontent.com/LennyLip/xiaomi-gateway-radio-stream-home-assistant/55add3c81dd57fe84b07d73670bc6bcbdbafaaf3/images/ha1.jpg)
 

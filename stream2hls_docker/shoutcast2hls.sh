@@ -213,12 +213,8 @@ do
     echo "+ Output bitrate: ${sbitrates[$index]}k"
     echo "+ Output playlist file $stream_playlist"
     is_program_exist "ffmpeg" "ffmpeg is not found. Please setup ffmpeg first"
-    # exec($ffbin.' -headers \''.$head.'\' -i "'.$radioRow['streamurl'].'" '.$encoder.' -f ssegment -segment_list '.escapeshellarg($global_path . 'uploads/playing/' . $xid . '/pl.m3u8').' 
-    # -segment_list_flags +live -segment_time 7 -segment_list_size 3 -segment_wrap 5 -segment_list_entry_prefix '.escapeshellarg('http://'.$domain.'/uploads/playing/' . $xid . '/').' 
-    # ' . escapeshellarg($global_path . 'uploads/playing/' . $xid . '/64%03d.aac') . ' > /dev/null 2>&1 < /dev/null &');
     # ffmpeg -i "$INPUT_STREAM" -vn -sn -c:a $OUTPUT_LIB $bitrate_opt -hls_time $CHUNK_SIZE $stream_playlist 2> /dev/null &
     ffmpeg -i "$INPUT_STREAM" -vn -sn -c:a $OUTPUT_LIB $bitrate_opt -hls_time $CHUNK_SIZE -f ssegment -segment_list $stream_playlist -segment_list_flags +live -segment_time 7 -segment_list_size 3 -segment_wrap 5 -segment_list_entry_prefix http://$DOMAIN/ ${OUTPUT_DIRECTORY}/${PLAYLIST_NAME}_%03d.aac > /dev/null 2>&1
-    # 2> /dev/null &
     echo "#EXT-X-STREAM-INF:BANDWIDTH=${sbitrates[$index]}000" >> $final_playlist
     echo "$(basename ${stream_playlist})" >> $final_playlist
 done
