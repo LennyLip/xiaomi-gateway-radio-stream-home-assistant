@@ -157,6 +157,9 @@ class XiaomiGateway(MediaPlayerEntity):
             docker = aiodocker.Docker()
             container = await docker.containers.get("shoutcast2hls")
             await container.start()
+        import time
+        # wait 5 sec to stream start
+        time.sleep(5) 
         asyncio.run(unpause())
         """Wake the Gateway back up from sleep."""
         result = self._try_command(
