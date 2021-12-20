@@ -1,1 +1,1 @@
-docker build -t LennyLip/stream2hls .
+docker build -t lennylip/xiaomi-radio-2-hls .

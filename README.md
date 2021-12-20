@@ -22,6 +22,8 @@ you can check /usr/share/nginx/html folder inside docker for generated files (m3
 ```
 {"id":1,"method":"volume_ctrl_fm","params":["99"]} # volume
 {"id":1,"method":"play_specify_fm","params":[527782011,50]} # play station from global list [id_station, volume]
+{"id":1,"method":"play_fm","params":["on"]} # play last played station
+{"id":1,"method":"play_fm","params":["off"]} # stop radio
 {"id":1,"method":"get_channels","params":{"start":0}} # get first 10 favorite channels
 {"id":10,"method":"add_channels","params":{"chs":[{"id":1023,"url":"http://192.168.1.5/morow_128k.m3u8","type":0}]}} # add channel to favorites
 {"id":10,"method":"set_channels","params":{"chs":[{"id":1023,"url":"http://192.168.1.5/morow_128k.m3u8","type":0}]}} # replace favorites with channels
